@@ -1,1 +1,1 @@
-web: gunicorn djangolyevents.wsgi --log-file -
+web: gunicorn djangolyteevents.wsgi --log-file -
