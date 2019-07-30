@@ -16,7 +16,7 @@ from django_filters import rest_framework as filters
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics
 from .serializers import EventSerializer
-from django.views.decorators.csrf import csrf_exempt
+#from django.views.decorators.csrf import csrf_exempt
 from rest_framework.decorators import api_view
 from django.conf import settings
 EVENTBRITE_CLIENT_ID="4GQQFB6MUA5Y2RNBIQ55"
