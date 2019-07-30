@@ -39,9 +39,8 @@ class Event(models.Model):
 
 
 class EventFilterVerbose(django_filters.FilterSet):
-    name = django_filters.CharFilter(lookup_expr='icontains')
-    organizer_name = django_filters.CharFilter(lookup_expr='icontains')
-    mininum_ticket_price = django_filters.NumberFilter()
+    name = django_filters.CharFilter(field_name='name',lookup_expr='icontains')
+    organizer_name = django_filters.CharFilter(field_name='organizer_name',lookup_expr='icontains')
     minimum_ticket_price__gt = django_filters.NumberFilter(field_name='minimum_ticket_price', lookup_expr='gt')
     minimum_ticket_price__lt = django_filters.NumberFilter(field_name='minimum_ticket_price', lookup_expr='lt')
     maximum_ticket_price__lt = django_filters.NumberFilter(field_name='maximum_ticket_price', lookup_expr='lt')
@@ -51,7 +50,7 @@ class EventFilterVerbose(django_filters.FilterSet):
 
     class Meta:
         model = Event
-        fields = ['name','minimum_ticket_price','maximum_ticket_price', 'start']
+        fields = ['name','organizer_name','minimum_ticket_price','maximum_ticket_price', 'start']
 
 
 class EventFilter(django_filters.FilterSet):

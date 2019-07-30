@@ -20,13 +20,13 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.decorators import api_view
 from django.conf import settings
 
-class EventViewset(viewsets.ModelViewSet):
+# class EventViewset(viewsets.ModelViewSet):
     
-    queryset = models.Event.objects.all()
+#     queryset = models.Event.objects.all()
 
-    serializer_class = serializers.EventSerializer
-    filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['name', 'url']
+#     serializer_class = serializers.EventSerializer
+#     filter_backends = [DjangoFilterBackend]
+#     filterset_fields = ['name', 'url']
     # filter_backends = (filters.DjangoFilterBackend, SearchFilter, OrderingFilter)
     # filter_fields = __basic_fields
     # search_fields = __basic_fields
