@@ -98,7 +98,7 @@ def EventUpdate(request,external_id):
         
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the events index.")
+    return HttpResponse("Hello, world. You're at my coding challenge.")
 
 def fill_db(request,pages,fill,start_page):
     # This information is from eventbrite
