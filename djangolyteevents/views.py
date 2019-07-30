@@ -68,7 +68,7 @@ class EventList(viewsets.ModelViewSet):
 #         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-@csrf_exempt
+#@csrf_exempt
 @api_view(['GET', 'PUT'])
 def EventUpdate(request,external_id):
     if request.method == 'GET':
