@@ -21,7 +21,7 @@ class Event(models.Model):
     changed=models.DateTimeField(default=now, blank=True)
     published=models.DateTimeField(default=now, blank=True)
     status= models.CharField(max_length=255, blank=True)
-    currency=models.CharField(max_length=3)
+    currency=models.CharField(max_length=3,default='USD')
     online_event=models.BooleanField(default=True)
     hide_start_date=models.BooleanField(default=True)
     hide_end_date=models.BooleanField(default=True)

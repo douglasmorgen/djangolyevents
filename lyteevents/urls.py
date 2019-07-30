@@ -19,6 +19,6 @@ from .api import router
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('djangolyteevents/', include('djangolyteevents.urls')),
+    path('events/', include('djangolyteevents.urls')),
     path('api/v1/', include(router.urls)),
 ]
