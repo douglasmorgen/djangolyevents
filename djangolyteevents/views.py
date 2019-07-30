@@ -100,7 +100,7 @@ def EventUpdate(request,external_id):
 def index(request):
     return HttpResponse("Hello, world. You're at the events index.")
 
-def fill_db(request,pages,fill):
+def fill_db(request,pages,fill,start_page):
     # This information is from eventbrite
     client_id = EVENTBRITE_CLIENT_ID
     client_secret = EVENTBRITE_CLIENT_SECRET
@@ -128,7 +128,7 @@ def fill_db(request,pages,fill):
     #events=json.loads(oauth.get(api_url_with_token).json())
     #events=oauth.get(api_url_with_token).json()
     
-    pagecount=1
+    pagecount=start_page
     token='4GQQFB6MUA5Y2RNBIQ55'
     description=''
     expansion="&expand=ticket_classes"
