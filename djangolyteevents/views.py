@@ -19,6 +19,9 @@ from .serializers import EventSerializer
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.decorators import api_view
 from django.conf import settings
+EVENTBRITE_CLIENT_ID="4GQQFB6MUA5Y2RNBIQ55"
+EVENTBRITE_CLIENT_SECRET="C5JPYH3P6XGF5G6D5PEGXHLZTQPVQISY7VCIGWE5L7WQT4WFK5"
+EVENTBRITE_TOKEN='4GQQFB6MUA5Y2RNBIQ55'
 
 # class EventViewset(viewsets.ModelViewSet):
     
@@ -99,8 +102,8 @@ def index(request):
 
 def fill_db(request,pages,fill):
     # This information is from eventbrite
-    client_id = settings.EVENTBRITE_CLIENT_ID
-    client_secret = settings.EVENTBRITE_CLIENT_SECRET
+    client_id = EVENTBRITE_CLIENT_ID
+    client_secret = EVENTBRITE_CLIENT_SECRET
     if pages > 6:
         pages=6
     if fill==1:
@@ -115,7 +118,7 @@ def fill_db(request,pages,fill):
     client = BackendApplicationClient(client_id=client_id)
     oauth = OAuth2Session(client=client)
     #token = oauth.fetch_token(token_url=token_url, client_id=client_id, client_secret=client_secret)
-    token=settings.EVENTBRITE_TOKEN
+    token=EVENTBRITE_TOKEN
     api_url_with_token=api_url+'?token='+token
     head = {'Authorization': 'token {}'.format(token)}
     #response = oauth.get(api_url, headers=head)

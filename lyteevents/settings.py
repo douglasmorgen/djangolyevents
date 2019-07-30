@@ -22,9 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '*mw65)qe60+wwn+3+n=&j8ih5@usr+$#f%*m^_8r5#c9gv@!ei'
-EVENTBRITE_CLIENT_ID="4GQQFB6MUA5Y2RNBIQ55"
-EVENTBRITE_CLIENT_SECRET="C5JPYH3P6XGF5G6D5PEGXHLZTQPVQISY7VCIGWE5L7WQT4WFK5"
-EVENTBRITE_TOKEN='4GQQFB6MUA5Y2RNBIQ55'
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
